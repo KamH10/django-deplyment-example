@@ -28,7 +28,7 @@ SECRET_KEY = '@e(42&hliqbdbj4&l#@bp*ijqmeokr0ia7)pd-7afv5bvoocwl'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['kamtj.pythonanywhere.com']
 
 
 # Application definition
