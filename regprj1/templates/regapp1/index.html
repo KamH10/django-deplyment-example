@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends "regapp1/base.html" %}
+{% load static %}
+
+{% block body_block %}
+    <div class="container">
+    <div class="jumbotron">
+        <h1 class='color1'>Home Page</h1>
+        {% if user.is_authenticated %}
+            <h2 class='color2'>Welcome {{ user.username }}!</h2>
+        {% else %}
+            <h2 class='color2'>Welcome to the site!</h2>
+        {% endif %}
+    </div>
+    </div>
+{% endblock %}

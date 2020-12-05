@@ -1,0 +1,25 @@
+{% extends 'regapp1/base.html' %}
+{% load static %}
+
+{% block body_block %}
+  <div class="container">
+    <div class="jumbotron">
+      <h1 class='color5'>Please Login</h1>
+
+        <form action="{% url 'regapp1:user_login' %}" method="POST">
+          {% csrf_token %}
+          
+          {# A more "HTML" way of creating the login form#}
+          <label for="username">Username:</label>
+          <input type="text" name="username" placeholder="Username">
+
+          <label for="password"></label>
+          <input type="password" name="password">
+
+          <input type="submit" name="" value="Login">
+
+        </form>
+
+    </div>
+  </div>
+{% endblock %}

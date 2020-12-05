@@ -1,0 +1,28 @@
+{% extends "regapp1/base.html" %}
+{% comment %} {% load staticfiles %} {% endcomment %}
+{% load static %}
+
+{% block body_block %}
+  <div class="container">
+    <div class="jumbotron">
+      {% if registered %}
+        <h1 class='color6'>Thank you for registering!</h1>
+      {% else %}
+        <h1 class="color3">Register Here</h1>
+        <h3 class="color4">Just fill out the form.</h3>
+
+        {% comment %} **NOTE** {% endcomment %}
+        <form enctype="multipart/form-data" method="POST">
+          {% csrf_token %}
+          {{ user_form.as_p }}
+          {{ profile_form.as_p }}
+          <input type="submit" name="" value="Register">
+        </form>
+
+      {% endif %}
+
+    </div>
+
+  </div>
+
+{% endblock %}
