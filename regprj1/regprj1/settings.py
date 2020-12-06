@@ -26,8 +26,12 @@ MEDIA_DIR = os.path.join(BASE_DIR, "media")             # s20e148 added
 SECRET_KEY = '@e(42&hliqbdbj4&l#@bp*ijqmeokr0ia7)pd-7afv5bvoocwl'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# **NOTE** For deployment to PythonAnywhere we have to change
+# DEBUG = True to DEBUG = False
+DEBUG = False
 
+# **NOTE** For deployment to PythonAnywhere we have to add
+# 'kamtj.pythonanywhere.com' 
 ALLOWED_HOSTS = ['kamtj.pythonanywhere.com']
 
 
